@@ -43,6 +43,7 @@ public class DiscountApplierTest {
     discountApplier.applyV2(discount, users);
 
     // Assert
+    Assertions.assertEquals(users, notifiedUsers);
   }
 
 }
