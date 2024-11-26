@@ -1,4 +1,4 @@
-package mock;
+package mocked;
 
 import info.dmerej.Authorizer;
 

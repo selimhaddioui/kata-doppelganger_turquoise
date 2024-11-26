@@ -1,10 +1,12 @@
 package info.dmerej;
 
 import info.dmerej.mailprovider.SendMailRequest;
-import mock.MockHttpClient;
+import mocked.MockHttpClient;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class MailSenderTest {
     @Test
@@ -41,5 +43,15 @@ public class MailSenderTest {
         assertEquals(sendMailRequest.recipient(), "retry");
         assertEquals(sendMailRequest.subject(), "New notification");
         assertEquals(sendMailRequest.body(), "Email body");
+    }
+
+    @Test
+    void mockito_should_make_a_valid_http_request() {
+       // #Todo
+    }
+
+    @Test
+    void mockito_should_retry_when_getting_a_503_error() {
+        // #Todo
     }
 }
